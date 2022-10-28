@@ -6,12 +6,12 @@
 #    By: ttakami <ttakami@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/21 01:18:20 by ttakami           #+#    #+#              #
-#    Updated: 2022/10/28 20:13:11 by ttakami          ###   ########.fr        #
+#    Updated: 2022/10/28 22:29:30 by ttakami          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= libftprintf.a
-CC			= gcc
+CC			= cc
 CFLAGS	= -Wall -Werror -Wextra
 SRCS		= ft_printf.c ft_printf_utils.c ft_uitoa_base.c ft_put_char.c
 #SRCSB		=
