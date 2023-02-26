@@ -6,7 +6,7 @@
 /*   By: ttakami <ttakami@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 09:16:28 by ttakami           #+#    #+#             */
-/*   Updated: 2022/09/24 21:48:29 by ttakami          ###   ########.fr       */
+/*   Updated: 2023/02/26 14:13:46 by ttakami          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_printf(const char *fmt, ...)
 	while (fmt[++i])
 	{
 		if (fmt[i] == '%' && fmt[i + 1])
-			tmp = ft_put_sth(fmt[++i], args);
+			tmp = ft_put_sth(fmt[++i], &args);
 		else
 			tmp = ft_put_char(fmt[i]);
 		if (tmp == -1)
