@@ -6,13 +6,13 @@
 /*   By: ttakami <ttakami@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 01:29:05 by ttakami           #+#    #+#             */
-/*   Updated: 2023/02/26 14:16:46 by ttakami          ###   ########.fr       */
+/*   Updated: 2023/02/27 23:06:44 by ttakami          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static	ssize_t	ft_put_string(char *str)
+static ssize_t	ft_put_string(char *str)
 {
 	ssize_t	len;
 
@@ -23,7 +23,7 @@ static	ssize_t	ft_put_string(char *str)
 	return (len);
 }
 
-static	ssize_t	ft_put_int(int num)
+static ssize_t	ft_put_int(int num)
 {
 	ssize_t	len;
 	char	*str;
@@ -36,7 +36,7 @@ static	ssize_t	ft_put_int(int num)
 	return (len);
 }
 
-static	ssize_t	ft_put_point(uintptr_t point, const char *base)
+static ssize_t	ft_put_point(uintptr_t point, const char *base)
 {
 	ssize_t	len;
 	char	*str;
@@ -57,7 +57,7 @@ static	ssize_t	ft_put_point(uintptr_t point, const char *base)
 	return (len);
 }
 
-static	ssize_t	ft_put_uint_base(unsigned int num, const char *base)
+static ssize_t	ft_put_uint_base(unsigned int num, const char *base)
 {
 	ssize_t	len;
 	char	*str;
