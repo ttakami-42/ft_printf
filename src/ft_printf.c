@@ -6,7 +6,7 @@
 /*   By: ttakami <ttakami@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 09:16:28 by ttakami           #+#    #+#             */
-/*   Updated: 2023/02/26 14:13:46 by ttakami          ###   ########.fr       */
+/*   Updated: 2023/02/28 03:48:25 by ttakami          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int	ft_printf(const char *fmt, ...)
 {
-	va_list		args;
-	ssize_t		len;
-	ssize_t		tmp;
-	ssize_t		i;
+	va_list	args;
+	ssize_t	len;
+	ssize_t	tmp;
+	ssize_t	i;
 
 	len = 0;
 	i = -1;
