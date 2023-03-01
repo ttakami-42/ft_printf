@@ -6,18 +6,18 @@
 #    By: ttakami <ttakami@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/21 01:18:20 by ttakami           #+#    #+#              #
-#    Updated: 2022/10/28 22:29:30 by ttakami          ###   ########.fr        #
+#    Updated: 2023/03/01 16:35:31 by ttakami          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= libftprintf.a
 CC			= cc
-CFLAGS	= -Wall -Werror -Wextra
+CFLAGS		= -Wall -Werror -Wextra
 SRCS		= ft_printf.c ft_printf_utils.c ft_uitoa_base.c ft_put_char.c
 #SRCSB		=
-OBJDIR		= obj
 LIBFT		= libft/libft.a
 HEADERPATH	= -I include
+OBJDIR		= obj
 OBJS		= $(addprefix $(OBJDIR)/, $(SRCS:.c=.o))
 #OBJSB		= $(addprefix $(OBJDIR)/, $(SRCSB:.c=.o))
 
@@ -27,10 +27,7 @@ OBJS		= $(addprefix $(OBJDIR)/, $(SRCS:.c=.o))
 ALL_OBJS	= $(OBJS)
 #endif
 
-all:	directories $(NAME)
-
-directories:
-	@mkdir -p $(OBJDIR)
+all:	$(NAME)
 
 clean:
 	rm -rf $(OBJDIR)
@@ -46,6 +43,7 @@ re:	fclean all
 #	@$(MAKE) WITH_BONUS=1 $(NAME)
 
 $(OBJDIR)/%.o:	%.c
+	@mkdir -p $(OBJDIR)
 	@[ -d $(OBJDIR) ]
 	$(CC) -c $(CFLAGS) -o $@ $< $(HEADERPATH)
 
@@ -56,8 +54,8 @@ $(NAME):	$(LIBFT) $(ALL_OBJS)
 	cp $(LIBFT) $(NAME)
 	ar rcs $(NAME) $(ALL_OBJS)
 
-.PHONY:	all directories clean fclean re
+.PHONY:	all clean fclean re
 
-#.PHONY:	all directories clean fclean re bonus
+#.PHONY:	all clean fclean re bonus
 
 vpath %.c src
